@@ -6,8 +6,15 @@ git reset --hard xxxx
 git log --online
 git commit -am 'parrafo y tamaño de fuente' (a: add y m: commit)
 
-#Añadir commit a GitHub remoto:
+#Modificar títulos de los commit:
+git commit --amend
+
+#COMMIT DE LOCAL A GITHUB REMOTO:
+#Crear repositorio en cuenta de GitHub remoto: nombre y descripción (opcional)
+#Añadir commit a GitHub remoto (tal vez pida usuario y contraseña o ssh):
 git remote add origin git@github.com:XtianCarlosQ/CursoGit.git
+#Cuando ya se hizo lo de arriba y se quiere actualizar nuevos cambios
+git push
 
 #En caso no funcione:
 #Establecer la rama remota para seguimiento
@@ -21,7 +28,9 @@ git config --global core.autocrlf true
 git tag 15-09-2023v1 -m 'Versión 1 del proyecto'
 git push --tags
 
-
+#COMMIT DESDE GITHUB REMOTO A LOCAL:
+#Hacer cambios y luego presionar el botón: "Commit changes" y luego:
+git pull
 
 #Añadir ssh:
 #Verificar si existe key shh
