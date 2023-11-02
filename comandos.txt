@@ -1,0 +1,7 @@
+git config --global --add safe.directory '%(prefix)///MYCLOUDPR4100/Xtian/PROYECTOS/CursoGit'
+git init
+git status -s
+git commit -m "nombre"
+git reset --hard xxxx
+git log --online
+git commit -am 'parrafo y tamaño de fuente' (a: add y m: commit)
