@@ -5,3 +5,11 @@ git commit -m "nombre"
 git reset --hard xxxx
 git log --online
 git commit -am 'parrafo y tamaño de fuente' (a: add y m: commit)
+
+#Establecer la rama remota para seguimiento
+git branch --set-upstream-to=origin/master master
+#Realizar el pull. Actualizar desde GitHub remoto
+git pull
+#Configura ruta de NAS en windows:
+git config --global core.autocrlf true
+
