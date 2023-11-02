@@ -6,10 +6,32 @@ git reset --hard xxxx
 git log --online
 git commit -am 'parrafo y tamaño de fuente' (a: add y m: commit)
 
+#Añadir commit a GitHub remoto:
+git remote add origin git@github.com:XtianCarlosQ/CursoGit.git
+
+#En caso no funcione:
 #Establecer la rama remota para seguimiento
 git branch --set-upstream-to=origin/master master
 #Realizar el pull. Actualizar desde GitHub remoto
 git pull
 #Configura ruta de NAS en windows:
 git config --global core.autocrlf true
+
+#Añadir tag a remoto:
+git tag 15-09-2023v1 -m 'Versión 1 del proyecto'
+git push --tags
+
+
+
+#Añadir ssh:
+#Verificar si existe key shh
+ls -al ~/.ssh
+#Generarndo keygen:
+ssh-keygen -t rsa -b 4096 -C "xtian_carlos@hotmail.com"
+output: Enter file in which to save the key (/c/Users/USER/.ssh/id_rsa):
+#Añadiendo keygen:
+eval "$(ssh-agent -s)"
+#Finalmente añadiendo archivos a GitHub remoto:
+git push origin master
+
 
