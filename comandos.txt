@@ -9,13 +9,17 @@ git commit -am 'parrafo y tamaño de fuente' (a: add y m: commit)
 #Modificar títulos de los commit:
 git commit --amend
 
-#COMMIT DE LOCAL A GITHUB REMOTO:
+#COMMIT DE LOCAL A GITHUB REMOTO: git push
 #Crear repositorio en cuenta de GitHub remoto: nombre y descripción (opcional)
 #Añadir commit a GitHub remoto (tal vez pida usuario y contraseña o ssh):
 git remote add origin git@github.com:XtianCarlosQ/CursoGit.git
 #Cuando ya se hizo lo de arriba y se quiere actualizar nuevos cambios
 git push
 
+
+#COMMIT DESDE GITHUB REMOTO A LOCAL: git pull
+#Hacer cambios y luego presionar el botón: "Commit changes" y luego:
+git pull
 #En caso no funcione:
 #Establecer la rama remota para seguimiento
 git branch --set-upstream-to=origin/master master
@@ -24,15 +28,12 @@ git pull
 #Configura ruta de NAS en windows:
 git config --global core.autocrlf true
 
-#Añadir tag a remoto:
+
+#AÑADIR TAGS a remoto:
 git tag 15-09-2023v1 -m 'Versión 1 del proyecto'
 git push --tags
 
-#COMMIT DESDE GITHUB REMOTO A LOCAL:
-#Hacer cambios y luego presionar el botón: "Commit changes" y luego:
-git pull
-
-#Añadir ssh:
+#AÑADIR SSH:
 #Verificar si existe key shh
 ls -al ~/.ssh
 #Generarndo keygen:
@@ -42,5 +43,13 @@ output: Enter file in which to save the key (/c/Users/USER/.ssh/id_rsa):
 eval "$(ssh-agent -s)"
 #Finalmente añadiendo archivos a GitHub remoto:
 git push origin master
+
+#CREAR RAMAS
+#Creando una rama llamada javascript
+git branch javascript
+#Para visualizar las ramas
+git branch
+#Moverse a la rama javascript
+git checkout javascript
 
 
